@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+      SEO TAGS: Updated with your friend's info
+    -->
+    <title>Cheerag Goel | Court Marriage Specialist in Delhi</title>
+    <meta name="description" content="Expert legal assistance for court marriages in Delhi. Cheerag Goel provides a simple, fast, and confidential process. Book a free consultation today.">
+
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        /* Tabs (Dark bg) */
+        .dark .tab-btn.active {
+            background-color: #111827; /* bg-gray-900 */
+            color: white;
+            border-bottom: 2px solid #eab308; /* border-yellow-500 */
+        }
+        .dark .tab-btn {
+            background-color: #1F2937; /* bg-gray-800 */
+            color: #D1D5DB; /* text-gray-300 */
+        }
+
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* === UPDATED: Hero Slider CSS === */
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0; /* Behind the content */
+        }
+        .hero-slider .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: fadeSlider 18s infinite; /* 6s per slide * 3 slides */
+        }
+        .hero-slider .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .hero-slider .slide:nth-child(2) {
+            animation-delay: 6s;
+        }
+        .hero-slider .slide:nth-child(3) {
+            animation-delay: 12s;
+        }
+        
+        /* UPDATED: Overlay for each slide removed */
+        .hero-slider .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: transparent; /* Was rgba(17, 24, 39, 0.8) */
+        }
+
+        /* UPDATED: Removed scale transform to prevent blur */
+        @keyframes fadeSlider {
+            0% { opacity: 0; }
+            8.33% { opacity: 1; }  /* Fade in for 1.5s */
+            33.33% { opacity: 1; } /* Hold for 4.5s */
+            41.66% { opacity: 0; } /* Fade out for 1.5s */
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- === HEADER & NAVIGATION === -->
+    <!-- UPDATED: Reduced padding from py-4 to py-3 -->
+    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div>
+                <a href="#" class="text-2xl font-bold text-white">Cheerag Goel</a>
+                <!-- FIXED: Removed stray '}' bracket that was breaking layout -->
+                <p class="text-sm text-yellow-400 font-medium">Court Marriage Specialist</p>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                <a href="#services" class="text-gray-300 hover:text-white">Services</a>
+                <a href="#documents" class="text-gray-300 hover:text-white">Documents</a>
+                <a href="#process" class="text-gray-300 hover:text-white">Process</a>
+                <a href="#faq" class="text-gray-300 hover:text-white">FAQ</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <!-- UPDATED: Phone number & Text -->
+            <div class="hidden lg:flex space-x-3">
+                <a href="tel:+919423675678" 
+                   class="flex items-center bg-yellow-500 text-black px-5 py-2 rounded-lg font-bold shadow-lg hover:bg-yellow-600 transition-colors">
+                    <i data-lucide="phone-call" class="w-5 h-5 mr-2"></i>
+                    EMERGENCY CONTACT
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-gray-900 shadow-xl border-t border-gray-700">
+            <a href="#home" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">Home</a>
+            <a href="#about" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">About</a>
+            <a href="#services" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">Services</a>
+            <a href="#documents" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">Documents</a>
+            <a href="#process" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">Process</a>
+            <a href="#faq" class="block px-6 py-3 text-gray-300 hover:bg-gray-800">FAQ</a>
+            <!-- UPDATED: Phone number & Text -->
+            <a href="tel:+919423675678" class="block px-6 py-4 bg-yellow-500 text-black text-center font-bold hover:bg-yellow-600">EMERGENCY CONTACT</a>
+            <!-- UPDATED: WhatsApp number -->
+            <a href="https://wa.me/919423675678" target="_blank" class="block px-6 py-4 bg-green-500 text-white text-center font-medium">
+                WhatsApp Support
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- === HERO SECTION === -->
+        <!-- UPDATED: This section is now JUST the slider. Content moved below. -->
+        <!-- UPDATED: Height adjusted to h-[350px] md:h-[550px] for better image fit -->
+        <section id="home" class="relative overflow-hidden h-[350px] md:h-[550px]">
+            
+            <!-- Slider Background Container -->
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="slide" style="background-image: url('https://lawtrend.in/wp-content/uploads/2022/03/court-marriage-process.jpeg');">
+                    <div class="slide-overlay"></div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide" style="background-image: url('https://www.centurylawfirm.in/blog/wp-content/uploads/2021/05/MatrimonialCases.jpg');">
+                    <div class="slide-overlay"></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide" style="background-image: url('https://courtmarriageingorakhpur.com/assets/slider/banner-1.png');">
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- === NEW HERO CONTENT SECTION === -->
+        <!-- UPDATED: All hero content moved here from inside the slider section -->
+        <section class="bg-gray-100 py-20 md:py-24">
+            <!-- Content (was on top of slider, now below) -->
+            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <!-- Left Content (Text from reference) -->
+                <div>
+                    <!-- SEO: The H1 tag is the most important headline for Google. -->
+                    <!-- UPDATED: Text color changed from white to gray-900 -->
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-gray-900">
+                        EASY COURT MARRIAGE IN Delhi
+                    </h1>
+                    <!-- UPDATED: Text color changed from yellow-400 to yellow-600 -->
+                    <p class="mt-4 text-2xl md:text-3xl font-semibold text-yellow-600">
+                        SIMPLIFIED | AFFORDABLE | FAST
+                    </p>
+                    <!-- UPDATED: Text color changed from gray-200 to gray-700 -->
+                    <p class="mt-6 text-lg text-gray-700 max-w-xl">
+                        Get a free, confidential consultation with Cheerag Goel. We handle all legal paperwork and formalities to ensure a stress-free experience.
+                    </p>
+                    
+                    <!-- List from reference site -->
+                    <!-- UPDATED: Text color changed from inherited white to gray-700 -->
+                    <ul class="mt-8 space-y-3 text-lg text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3"></i>
+                            100% LEGAL & SECURE
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3"></i>
+                            AFFORDABLE FEES
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3"></i>
+                            FAST & SIMPLE PROCESS
+                        </li>
+                         <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3"></i>
+                            COMPLETE LEGAL SUPPORT
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Right Form (From reference) -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Get a Free Consultation</h3>
+                    <!-- A simple form. For a real site, you'd use a service like Netlify Forms or Formspree -->
+                    <!-- UPDATED: Removed action/method, added ID -->
+                    <form id="consultation-form">
+                        <div class="space-y-5">
+                            <div>
+                                <label for="hero-name" class="font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="hero-name" name="name" required
+                                       class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="hero-phone" class="font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="hero-phone" name="phone" required
+                                       class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="hero-email" class="font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="hero-email" name="email"
+                                       class="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <button type="submit"
+                                        class="w-full bg-yellow-500 text-black px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:bg-yellow-600 transition-colors">
+                                    Book My Consultation
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- === WHY CHOOSE US (Section from Reference) === -->
+        <section class="bg-gray-50 border-b border-gray-200">
+            <div class="container mx-auto px-6 py-12 grid md:grid-cols-3 gap-8 text-center">
+                <div class="flex items-center justify-center p-4">
+                    <i data-lucide="shield-check" class="w-10 h-10 mr-4 text-blue-600 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">100% Legal & Secure</h3>
+                        <p class="text-gray-600">Fully official and confidential process.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <i data-lucide="piggy-bank" class="w-10 h-10 mr-4 text-blue-600 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Affordable Fees</h3>
+                        <p class="text-gray-600">Transparent pricing with no hidden costs.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center p-4">
+                    <i data-lucide="clock" class="w-10 h-10 mr-4 text-blue-600 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Fast & Simple Process</h3>
+                        <p class="text-gray-600">We handle all the complex paperwork for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === ABOUT SECTION === -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- UPDATED: Photo changed to new logo and classes adjusted -->
+                    <img src="https://img.freepik.com/free-vector/gradient-advocate-logo-template_23-2150670338.jpg?semt=ais_hybrid&w=740&q=80" 
+                          alt="Cheerag Goel, Court Marriage Lawyer in Delhi" 
+                         class="rounded-xl shadow-2xl w-full h-auto object-cover object-center aspect-square">
+                </div>
+                <div>
+                    <span class="text-yellow-600 font-semibold">ABOUT OUR SERVICES</span>
+                    <!-- UPDATED: Name -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+                        Your Court Marriage Expert, Cheerag Goel
+                    </h2>
+                    <!-- UPDATED: Name and City -->
+                    <p class="text-lg text-gray-600 mb-4">
+                        Hello! I'm Cheerag Goel, an advocate dedicated to making the court marriage process as simple and stress-free as possible for couples in Delhi.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        With 10+ years of experience in family law, I've guided hundreds of couples through the legal formalities. My mission is to provide you with clear, accurate, and confidential advice every step of the way. I understand this is a significant milestone, and I'm here to ensure it's handled with the utmost care and professionalism.
+                    </p>
+                    <a href="#contact" class="text-yellow-600 font-semibold text-lg hover:underline">
+                        Get in Touch <i data-lucide="arrow-right" class="inline w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- === SERVICES SECTION === -->
+        <section id="services" class="bg-gray-50 py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-yellow-600 font-semibold">OUR CORE SERVICES</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                        How We Can Help You
+                    </h2>
+                </div>
+                <!-- UPDATED: Reverted to simple, non-clickable blocks -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1: Court Marriage -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transition-transform hover:scale-105">
+                        <i data-lucide="gavel" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Court Marriage</h3>
+                        <p class="text-gray-600">The most common, legally-binding marriage registration for all Indian citizens.</p>
+                    </div>
+                    <!-- Service 2: Special Marriage Act -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transition-transform hover:scale-105">
+                        <i data-lucide="stamp" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Special Marriage Act</h3>
+                        <p class="text-gray-600">Ideal for inter-faith and inter-caste couples, ensuring a secular and legal union.</p>
+                    </div>
+                    <!-- Service 3: Arya Samaj Marriage -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transition-transform hover:scale-105">
+                        <i data-lucide="heart-handshake" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Arya Samaj Marriage</h3>
+                        <p class="text-gray-600">A simple ceremony followed by legal registration for Hindu couples.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === DOCUMENTS REQUIRED === -->
+        <!-- Style: Dark background section (Kept our superior Tab UI) -->
+        <section id="documents" class="py-24 bg-gray-900 text-white dark">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-yellow-500 font-semibold">CHECKLIST</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">
+                        Documents Required
+                    </h2>
+                    <p class="text-lg text-gray-300">Preparing these in advance will make the process much faster.</p>
+                </div>
+
+                <!-- Tab Buttons (Our feature, but styled to match) -->
+                <div class="tab-container flex border-b border-gray-700">
+                    <button class="tab-btn active flex-1 py-4 px-6 font-semibold" data-tab="couple">For the Couple</button>
+                    <button class="tab-btn flex-1 py-4 px-6 font-semibold" data-tab="witnesses">For the Witnesses</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="py-8">
+                    <!-- Couple's Documents -->
+                    <div id="tab-couple" class="tab-content active">
+                        <ul class="space-y-4 text-lg text-gray-300">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Proof of Age:</strong> Birth Certificate, 10th Grade Marksheet, or Passport. (Male: 21+ years, Female: 18+ years).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Proof of Residence:</strong> Aadhaar Card, Voter ID, Passport, or Driving License.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Passport-Sized Photos:</strong> 6 copies each for the bride and groom.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Affidavits:</strong> Separate affidavits from both partners stating date of birth, marital status (unmarried/divorced/widowed), and nationality.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>If Previously Married:</strong> A certified copy of the Divorce Decree or the Death Certificate of the previous spouse is required.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Witnesses' Documents -->
+                    <div id="tab-witnesses" class="tab-content">
+                         <ul class="space-y-4 text-lg text-gray-300">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Three Witnesses:</strong> You must have three witnesses present on the day of marriage.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Proof of Residence:</strong> Aadhaar Card, Voter ID, or Passport for each witness.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                                <span><strong>Passport-Sized Photos:</strong> 2 copies for each witness.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === PROCESS / SERVICES SECTION === -->
+        <section id="process" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-yellow-600 font-semibold">HOW IT WORKS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                        Our 5-Step Court Marriage Process
+                    </h2>
+                    <p class="text-lg text-gray-600">We've streamlined the entire procedure to make it transparent and straightforward.</p>
+                </div>
+                
+                <!-- Step-by-Step Process Timeline -->
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- The vertical line -->
+                    <div class="absolute left-6 md:left-1/2 top-2 bottom-2 w-1 bg-yellow-200 rounded -translate-x-1/2"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-yellow-500 rounded-full border-4 border-white shadow -translate-x-1/2 mt-1"></div>
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12"></div>
+                            <div class="md:w-5/12 pl-12 md:pl-0 md:text-left">
+                                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">1. Consultation & Document Prep</h3>
+                                    <p class="text-gray-600">We'll review your case, confirm eligibility, and help you gather all required documents and prepare the affidavits.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-yellow-500 rounded-full border-4 border-white shadow -translate-x-1/2 mt-1"></div>
+                        <div class="md:flex md:items-center md:justify-between flex-row-reverse">
+                            <div class="md:w-5/12"></div>
+                            <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
+                                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">2. Notice of Intended Marriage</h3>
+                                    <p class="text-gray-600">We will file the official notice with the Marriage Registrar in the appropriate jurisdiction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-yellow-500 rounded-full border-4 border-white shadow -translate-x-1/2 mt-1"></div>
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12"></div>
+                            <div class="md:w-5/12 pl-12 md:pl-0 md:text-left">
+                                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">3. The 30-Day Waiting Period</h3>
+                                    <p class="text-gray-600">A mandatory 30-day period begins after the notice is published for any potential objections.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-yellow-500 rounded-full border-4 border-white shadow -translate-x-1/2 mt-1"></div>
+                        <div class="md:flex md:items-center md:justify-between flex-row-reverse">
+                            <div class="md:w-5/1Zodiacs0/12"></div>
+                            <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
+                                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">4. Solemnization & Registration</h3>
+                                    <p class="text-gray-600">On the scheduled date, you, your partner, and three witnesses will sign the registry in the presence of the Marriage Officer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative mb-12">
+                        <div class="absolute left-6 md:left-1/2 w-8 h-8 bg-yellow-500 rounded-full border-4 border-white shadow -translate-x-1/2 mt-1"></div>
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12"></div>
+                            <div class="md:w-5/12 pl-12 md:pl-0 md:text-left">
+                                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">5. Official Marriage Certificate</h3>
+                                    <p class="text-gray-600">You will be issued the official, legally-binding Marriage Certificate, completing the process.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === FAQ SECTION (Great for SEO!) === -->
+        <section id="faq" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-16">
+                    <span class="text-yellow-600 font-semibold">QUESTIONS?</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                        Frequently Asked Questions
+                    </h2>
+                </div>
+                
+                <!-- Accordion items -->
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="accordion-toggle w-full flex justify-between items-center text-left px-6 py-5">
+                            <span class="text-lg font-semibold text-gray-800">Do we need our parents' consent?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5">
+                            <p class="text-gray-600">
+                                No. Under the Special Marriage Act, 1954, if both partners are of legal age (21 for males, 18 for females) and are marrying of their own free will, parents' consent is not required.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="accordion-toggle w-full flex justify-between items-center text-left px-6 py-5">
+                            <span class="text-lg font-semibold text-gray-800">What if we are from different religions?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5">
+                            <p class="text-gray-600">
+                                That is the primary purpose of the Special Marriage Act, 1954. It allows any two Indian citizens to marry, regardless of their faith or caste.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="accordion-toggle w-full flex justify-between items-center text-left px-6 py-5">
+                            <span class="text-lg font-semibold text-gray-800">What if one partner is a foreign national?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5">
+                            <p class="text-gray-600">
+                                Marriage is still possible under the Special Marriage Act. The foreign national will need to provide a valid passport, visa, and a "No Objection Certificate" (NOC) or "Marital Status Certificate" from their respective embassy.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="accordion-toggle w-full flex justify-between items-center text-left px-6 py-5">
+                            <span class="text-lg font-semibold text-gray-800">Can we get married from any city?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="accordion-content px-6 pb-5">
+                            <!-- UPDATED: City -->
+                            <p class="text-gray-600">
+                                To file the notice, at least one of the partners must have resided in the district (e.g., Delhi) for a minimum of 30 days prior to filing. We can advise you on this during our consultation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === CONTACT SECTION & MAP === -->
+        <section id="contact" class="py-24 bg-gray-900 text-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <span class="text-yellow-500 font-semibold">GET IN TOUCH</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">
+                        Visit Our Office
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Contact us directly via phone, email, or WhatsApp. We are here to help. All consultations are 100% confidential.
+                    </p>
+                    
+                    <!-- UPDATED: All contact info -->
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i data-lucide="phone" class="w-6 h-6 text-yellow-500 mr-4"></i>
+                            <a href="tel:+919423675678" class="text-gray-100 hover:text-white text-lg">+91 9423675678</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-green-400 mr-4"></i>
+                            <a href="https://wa.me/919423675678" target="_blank" class="text-gray-100 hover:text-white text-lg">WhatsApp Support</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="mail" class="w-6 h-6 text-yellow-500 mr-4"></i>
+                            <a href="mailto:adv.cheeraggoel@gmail.com" class="text-gray-100 hover:text-white text-lg">adv.cheeraggoel@gmail.com</a>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-yellow-500 mr-4 mt-1"></i>
+                            <!-- UPDATED: Dummy address to match map -->
+                            <p class="text-gray-100 text-lg">
+                                Delhi High Court<br>Sher Shah Rd, New Delhi, Delhi 110503
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div>
+                    <!-- 
+                      GOOGLE MAPS EMBED: This is CRITICAL for Local SEO
+                    -->
+                    <!-- UPDATED: Added relative container and transparent link overlay -->
+                    <div class="relative mt-8 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+                        <!-- UPDATED: Replaced iframe src with Delhi High Court -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.566113611382!2d77.234891675128!3d28.61288597567554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x62b46f1357908f7c!2sDelhi%20High%20Court!5e0!3m2!1sen!2sin!4v1729871899136!5m2!1sen!2sin" width="100%" height="384" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-96 relative z-0"></iframe>
+                        <!-- UPDATED: Transparent link overlay for directions -->
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Delhi+High+Court" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-10" aria-label="Get directions to Delhi High Court"></a>
+                    </div>
+                    <!-- UPDATED: "Get Directions" Button link -->
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Delhi+High+Court" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-yellow-600 transition-colors">
+                        <i data-lucide="navigation" class="w-5 h-5 mr-2"></i>
+                        Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- === FOOTER === -->
+    <!-- UPDATED: Color to dark navy blue (bg-gray-900) and info -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Cheerag Goel. All rights reserved.</p>
+            <p class="text-sm mt-2">Legal Services for Court Marriage in Delhi.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // Lucide Icons activation
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide icons library not loaded.");
+            }
+
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Accordion Toggle
+            const accordions = document.querySelectorAll('.accordion-toggle');
+            accordions.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('[data-lucide="chevron-down"]'); // Target only chevron-down
+                    
+                    // Check if the content element exists
+                    if (!content || !content.classList.contains('accordion-content')) {
+                        // This button is not a standard accordion (like the reverted services)
+                        return;
+                    }
+
+                    if (content.style.maxHeight) {
+                        // Close
+                        content.style.maxHeight = null;
+                        if(icon) icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Open
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        if(icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Tab functionality for Documents section
+            const tabContainers = document.querySelectorAll('.tab-container');
+            tabContainers.forEach(container => {
+                const tabButtons = container.querySelectorAll('.tab-btn');
+                const tabContents = container.parentElement.querySelectorAll('.tab-content'); // Find content in parent
+
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+
+                        // Update buttons within this container
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Update content
+                        tabContents.forEach(content => {
+                            if (content.id === 'tab-' + tabId) {
+                                content.classList.add('active');
+                            } else {
+                                content.classList.remove('active');
+                            }
+                        });
+                    });
+                });
+            });
+
+            // Smooth scroll for nav links (with sticky header offset)
+            const stickyHeader = document.querySelector('header.sticky');
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu on click
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    
+                    // Special case for #home
+                    if (targetId === '#home') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        return;
+                    }
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        let headerOffset = 0;
+                        if (stickyHeader) {
+                            headerOffset = stickyHeader.offsetHeight;
+                        }
+                        
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // === NEW: WhatsApp Consultation Form Handler ===
+            const consultForm = document.getElementById('consultation-form');
+            if (consultForm) {
+                consultForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('hero-name').value;
+                    const phone = document.getElementById('hero-phone').value;
+                    const email = document.getElementById('hero-email').c;
+                    
+                    // Advocate's WhatsApp number (with country code)
+                    const advocatePhone = '919423675678';
+                    
+                    // Create the message
+                    let message = `Hello Advocate Cheerag Goel,\n\nMy name is *${name}*.\nI would like to book a consultation.\n\nMy details are:\nPhone: ${phone}`;
+                    
+                    if (email) {
+                        message += `\nEmail: ${email}`;
+                    }
+                    
+                    // URL-encode the message
+                    const encodedMessage = encodeURIComponent(message);
+                    
+                    // Create the WhatsApp URL
+                    const whatsappURL = `https://wa.me/${advocatePhone}?text=${encodedMessage}`;
+                    
+                    // Open WhatsApp in a new tab
+                    window.open(whatsappURL, '_blank');
+                });
+            }
+
+        }); // End of DOMContentLoaded
+    </script>
+</body>
+</html>
+
