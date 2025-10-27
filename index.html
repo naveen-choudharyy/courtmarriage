@@ -730,37 +730,42 @@
                 });
             });
 
-            // === NEW: WhatsApp Consultation Form Handler ===
-            const consultForm = document.getElementById('consultation-form');
-            if (consultForm) {
-                consultForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('hero-name').value;
-                    const phone = document.getElementById('hero-phone').value;
-                    const email = document.getElementById('hero-email').c;
-                    
-                    // Advocate's WhatsApp number (with country code)
-                    const advocatePhone = '919999627930';
-                    
-                    // Create the message
-                    let message = `Hello Advocate Cheerag Goel,\n\nMy name is *${name}*.\nI would like to book a consultation.\n\nMy details are:\nPhone: ${phone}`;
-                    
-                    if (email) {
-                        message += `\nEmail: ${email}`;
-                    }
-                    
-                    // URL-encode the message
-                    const encodedMessage = encodeURIComponent(message);
-                    
-                    // Create the WhatsApp URL
-                    const whatsappURL = `https://wa.me/${advocatePhone}?text=${encodedMessage}`;
-                    
-                    // Open WhatsApp in a new tab
-                    window.open(whatsappURL, '_blank');
-                });
-            }
+           // === NEW: WhatsApp Consultation Form Handler ===
+        const consultForm = document.getElementById('consultation-form');
+        if (consultForm) {
+            consultForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 1. Get form values correctly
+                const name = document.getElementById('hero-name').value;
+                const phone = document.getElementById('hero-phone').value;
+                const email = document.getElementById('hero-email').value;
+                
+                // 2. Advocate's WhatsApp number (with country code)
+                const advocatePhone = '919999627930';
+                
+                // 3. Create the clean message.
+                // We use \n for new lines. encodeURIComponent will handle it.
+                let message = `Hello Advocate Cheerag Goel,\n\nI would like to book a consultation.\n\n*My Details:*\nName: ${name}\nPhone: ${phone}`;
+                
+                // 4. Only add the email line if the user entered one
+                if (email) {
+                    message += `\nEmail: ${email}`;
+                }
+                
+                // 5. URL-encode the message
+                const encodedMessage = encodeURIComponent(message);
+                
+                // 6. Create the WhatsApp URL
+                const whatsappURL = `https://wa.me/${advocatePhone}?text=${encodedMessage}`;
+                
+                // 7. Open WhatsApp in a new tab
+                window.open(whatsappURL, '_blank');
+
+                // 8. Optional: Clear the form after submission
+                consultForm.reset();
+            });
+        }
 
         }); // End of DOMContentLoaded
     </script>
